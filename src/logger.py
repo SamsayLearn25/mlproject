@@ -17,7 +17,7 @@ logging.basicConfig(
     
 )
 
-from exception import CustomException
+from src.exception import CustomException
 import sys
 if __name__ == "__main__":
     try:
