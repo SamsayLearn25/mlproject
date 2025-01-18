@@ -18,8 +18,8 @@ from dataclasses import dataclass
 @dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path:str = os.path.join('artifacts', 'preprocessor.pkl')
-    train_data_path:str = os.path.join('artifacts', 'transformed', 'train.csv')
-    test_data_path:str = os.path.join('artifacts', 'transformed', 'test.csv')
+    train_data_path:str = os.path.join('artifacts', 'transformed', 'train.npy')
+    test_data_path:str = os.path.join('artifacts', 'transformed', 'test.npy')
 
 @dataclass
 class DataTransformationArtifact:
@@ -101,7 +101,7 @@ class DataTransformation:
             logging.info(f"Preprocessing completed with shape {train_transformed.shape} {test_transformed.shape}")
 
             train_arr = np.c_[train_transformed, np.array(train_target)]
-            test_arr = np.c_[test_transformed, np.array(test_transformed)]
+            test_arr = np.c_[test_transformed, np.array(test_target)]
 
             logging.info(str(train_arr.shape)+" "+str(test_arr.shape))
 
