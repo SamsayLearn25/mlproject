@@ -9,8 +9,6 @@ from sklearn.ensemble import AdaBoostRegressor, GradientBoostingRegressor, Rando
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import KNeighborsRegressor
-from xgboost import XGBRegressor
-
 from src.utils import *
 
 from dataclasses import dataclass
@@ -46,7 +44,6 @@ class ModelTrainer:
             "LinearRegression": LinearRegression(),
             "DecisionTreeRegressor": DecisionTreeRegressor(),
             "KNeighborsRegressor": KNeighborsRegressor(),
-            "XGBRegressor": XGBRegressor()
             
         }
 
