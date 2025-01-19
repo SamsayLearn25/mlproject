@@ -44,7 +44,6 @@ class ModelTrainer:
             "LinearRegression": LinearRegression(),
             "DecisionTreeRegressor": DecisionTreeRegressor(),
             "KNeighborsRegressor": KNeighborsRegressor(),
-            
         }
 
         return models
